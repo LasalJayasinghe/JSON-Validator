@@ -1,0 +1,130 @@
+[
+  {
+      "page_label": "User Data Form",
+      "fields": [
+          {
+              "field_id": "english_name",
+              "field_label": "Name",
+              "field_mandatory": "yes",
+              "field_placeholder": "Enter name",
+              "field_type": "text",
+              "field_value": ""
+          },
+          {
+              "field_id": "userEmail",
+              "field_label": "Email",
+              "field_mandatory": "yes",
+              "field_placeholder": "Enter email",
+              "field_type": "email"
+          },
+          {
+              "field_id": "contact",
+              "field_label": "Contact No.",
+              "field_mandatory": "yes",
+              "field_placeholder": "Enter contact no.",
+              "field_type": "number"
+          },
+          {
+              "field_id": "identity",
+              "field_label": "Driving License No.",
+              "field_mandatory": "yes",
+              "field_placeholder": "e.g. 012 345 678",
+              "field_type": "number"
+          },
+          {
+            "field_id": "driving_license",
+            "field_label": "I confirm to have driving license.",
+            "field_type": "checkbox",
+            "field_value": ""
+          },
+          {
+            "field_id": "employment",
+            "field_label": "Employment desired",
+            "field_value": "Part-Time",
+            "field_mandatory": "yes",
+            "field_options": [
+                {
+                    "option_label": "Full-Time"
+                },
+                {
+                    "option_label": "Part-Time"
+                }
+            ],
+            "field_type": "select"
+          }
+      ]
+  },
+  {
+    "page_label": "Business Data Form",
+    "fields": [
+      {
+        "field_id": "business_name",
+        "field_label": "Business Name",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Business Name",
+        "field_type": "text",
+        "field_value": ""
+      },
+      {
+        "field_id": "businessEmail",
+        "field_label": "Business Email",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Business Email",
+        "field_type": "email",
+        "field_value": ""
+      },
+      {
+        "field_id": "business_contact_Field",
+        "field_label": "Business Contact No.",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter contact no.",
+        "field_type": "number"
+      },
+      {
+        "field_id": "business_name",
+        "field_label": "Business Address",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Business Address",
+        "field_type": "text",
+        "field_value": ""
+      }
+    ]
+  },
+  {
+    "page_label": "Professional Data Form",
+    "fields": [
+      {
+        "field_id": "job_title",
+        "field_label": "Job Title",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Job Title",
+        "field_type": "text",
+        "field_value": ""
+      },
+      {
+        "field_id": "employer",
+        "field_label": "Employer",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Employer Name",
+        "field_type": "text",
+        "field_value": ""
+      },
+      {
+        "field_id": "jobEmail",
+        "field_label": "Company Email",
+        "field_mandatory": "",
+        "field_placeholder": "Enter Company Email",
+        "field_type": "email",
+        "field_value": ""
+      },
+      {
+        "field_id": "job_address",
+        "field_label": "Employer Address",
+        "field_mandatory": "yes",
+        "field_placeholder": "Enter Employer Address",
+        "field_type": "text",
+        "field_value": ""
+      }
+    ]
+  }
+]
