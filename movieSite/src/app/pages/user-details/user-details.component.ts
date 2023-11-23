@@ -3,33 +3,26 @@ import {FormGroup} from '@angular/forms';
 import {FormlyFieldConfig} from '@ngx-formly/core';
 import { formGroups } from '../form-fields';
 
-
 interface MyModel {
-  text: string;
-  email: string;
-  Radio: number;
   firstName: string;
   lastName: string;
 }
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrls: ['./user-details.component.css']
 })
 
-
-export class FormComponent {
+export class UserDetailsComponent {
   form = new FormGroup({});
   model: MyModel = {
-    text: '',
-    email: '',
-    Radio: 0,
     firstName: '',
     lastName: '',
   };
+
   fields =  formGroups
-    .flatMap(group => group.otherDetails)
+    .flatMap(group => group.userDetails)
     .filter((field): field is FormlyFieldConfig => !!field); // Use a type assertion to filter out undefined values
 
   onSubmit(model: MyModel) {
