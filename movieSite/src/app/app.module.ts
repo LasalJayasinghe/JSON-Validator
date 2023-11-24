@@ -14,8 +14,8 @@ import { FormComponent } from './pages/form/form.component';
 
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
-import { UserDetailsComponent } from './pages/user-details/user-details.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { InputFieldType } from './pages/custom-component/custom-component.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     SearchComponent,
     MovieDetailsComponent,
     FormComponent,
-    UserDetailsComponent,
     ProfileComponent,
+    InputFieldType,
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {FormlyFieldConfig} from '@ngx-formly/core';
-import { formGroups } from '../form-fields';
+import { createInputField } from '../form-fields';
+import { FirstName, LastName, Email, Address, Gender, Nationality} from '../formStructures'
 
-interface MyModel {
-  firstName: string;
-  lastName: string;
-  gender: number; 
-  nationality: number;
-  email : string;
-  address : string;
-}
+interface MyModel {}
 
 @Component({
   selector: 'app-form',
@@ -18,21 +12,38 @@ interface MyModel {
   styleUrls: ['./profile.component.css']
 })
 
-
 export class ProfileComponent {
   form = new FormGroup({});
   model: MyModel = {
-    firstName: 'Peter',
-    lastName: 'Jackson',
-    gender: 1,
+    fname: 'Peporona',
+    lName: 'Jackson',
+    gender: 2,
     nationality : 1,
     email : "peter@email.com",
-    address : "Park Street, Colorado"
+    address : "Park Street, Colorado",
+    bio : "Cup of coffe for you!!",
   };
 
-  fields =  formGroups
-    .flatMap(group => group.userDetails)
-    .filter((field): field is FormlyFieldConfig => !!field); // Use a type assertion to filter out undefined values
+  Bio: FormlyFieldConfig = createInputField({   
+    key :  'bio',
+    type :  'textarea',
+    label :   'Bio',
+    placeholder :   'Enter about yourself',
+    required :  false
+    }
+    );
+  
+    formGroups : FormlyFieldConfig[] = [
+      FirstName,
+      LastName,
+      Gender,
+      Address, 
+      Email,
+      Nationality,
+      this.Bio,
+    ]
+
+    fields: FormlyFieldConfig[] = this.formGroups;
 
   onSubmit(model: MyModel) {
     console.log(model);

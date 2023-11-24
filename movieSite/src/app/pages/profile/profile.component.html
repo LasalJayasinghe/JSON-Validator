@@ -13,7 +13,7 @@
       <div class="col-md-9">
         <div class="formContainer">
             <form [formGroup]="form" (ngSubmit)="onSubmit(model)">
-              <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+              <formly-form [form]="form" [fields]="fields" [model]="model" class="custom-form"></formly-form>
               <button type="button" class="btn btn-outline-warning" (click)="resetForm()">Reset</button>
             </form>
           </div>    

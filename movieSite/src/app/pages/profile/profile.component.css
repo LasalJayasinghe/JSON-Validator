@@ -39,3 +39,17 @@
     cursor: pointer;
   }
   
+
+  /* Form Css */
+
+  /* styles.css */
+
+.custom-classname {
+  border: 1px solid #570b0b;
+  padding: 5px;
+  margin: 5px;
+}
+
+.custom-label {
+  font-weight: bold;
+}
